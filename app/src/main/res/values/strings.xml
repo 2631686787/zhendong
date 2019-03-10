@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">按摩器</string>
+    <string name="shichang">振动时长:</string>
+    <string name="jiange">振动间隔:</string>
+    <string name="qiangdu_di">低</string>
+    <string name="qiangdu_zhong">中</string>
+    <string name="qiangdu_gao">高</string>
+</resources>

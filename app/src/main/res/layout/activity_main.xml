@@ -1,117 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:background="@color/background_color"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    >
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:gravity="center"
-        android:layout_marginTop="10dp"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/shichang"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/zhendongshichang_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100"
-            android:textColor="@color/hongse"
-            android:textSize="20sp" />
-    </LinearLayout>
+        android:layout_centerVertical="true"
+        android:padding="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <SeekBar
-            android:id="@+id/zhendongshichang_seekbar"
+        <RelativeLayout
+            android:id="@+id/diyihang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/zdsc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shichang"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/zhendongshichang_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/zdsc"
+                android:text="100"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dierhang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/zdsc"
+            android:layout_marginTop="40dp">
 
-            android:max="999"
-            android:progress="100"
-            />
-    </LinearLayout>
+            <SeekBar
+                android:id="@+id/zhendongshichang_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="999"
+                android:progress="100" />
+        </RelativeLayout>
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <TextView
+        <RelativeLayout
+            android:id="@+id/disanhang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/jiange"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/zhendongjiange_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="500"
-            android:textColor="@color/hongse"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:layout_below="@+id/dierhang"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <SeekBar
-            android:id="@+id/zhendongjiange_seekbar"
+            <TextView
+                android:id="@+id/zdjg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jiange"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/zhendongjiange_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/zdjg"
+                android:text="500"
+                android:textColor="@color/text_color"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/disihang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:max="999"
-            android:progress="500"
-            />
-    </LinearLayout>
+            android:layout_below="@id/disanhang"
+            android:layout_marginTop="20dp">
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="3">
-        <Button
-            android:id="@+id/qiangdu_di"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/qiangdu_di"/>
-        <Button
-            android:id="@+id/qinagdu_zhong"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/qiangdu_zhong"/>
-        <Button
-            android:id="@+id/qiangdu_gao"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/qiangdu_gao"/>
-    </LinearLayout>
+            <SeekBar
+                android:id="@+id/zhendongjiange_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/zhendongjiange_text"
+                android:max="999"
+                android:progress="500" />
 
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/kg"
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/diwuhang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/disihang"
+            android:layout_marginTop="40dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/qiangdu_di"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/kaiguan"
+                android:text="@string/qiangdu_di"
+                android:textColor="@color/text_color" />
+
+            <Button
+                android:id="@+id/qinagdu_zhong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/kaiguan"
+                android:text="@string/qiangdu_zhong"
+                android:textColor="@color/text_color" />
+
+            <Button
+                android:id="@+id/qiangdu_gao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/kaiguan"
+                android:text="@string/qiangdu_gao"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="开始"
-            android:textColor="@color/hongse"/>
+            android:layout_below="@id/diwuhang"
+            android:layout_marginTop="30dp">
 
-    </LinearLayout>
-</LinearLayout>
+            <Button
+                android:id="@+id/kg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/kaiguan"
+                android:text="开始"
+                android:textColor="@color/text_color" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

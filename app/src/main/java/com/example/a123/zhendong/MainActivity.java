@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button kaiguan;
     private Vibrator vibrator;
     private int num = 1;//设置seekbar最小值为1
-//    private PowerManager pm;
-//    private PowerManager.WakeLock wl;
+
 
 
     @SuppressLint("NewApi")
@@ -35,15 +34,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        pm =(PowerManager)getSystemService(Context.POWER_SERVICE);
-//        wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,"------------------");
-//        wl.acquire();
-
-        // 沉浸状态栏
-        Window window = getWindow();
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(getResources().getColor(R.color.colorPrimary));
 
 
         //绑定对象
@@ -67,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
